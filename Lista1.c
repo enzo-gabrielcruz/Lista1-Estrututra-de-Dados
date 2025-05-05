@@ -1,5 +1,5 @@
 
-
+// INTEGRANTES DA DUPLA: ENZO GABRIEL CALADO DA CRUZ | JOÃO NETO
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -163,8 +163,8 @@ void remover_ultima_linha_em_branco(const char *file_out) {
 
 int main() {
     ponto pontos[500],chave;
-    FILE *file_in = fopen("L0Q1.in", "r");
-    FILE *file_out = fopen("L0Q1.out", "w");
+    FILE *file_in = fopen("L0Q2.in", "r");
+    FILE *file_out = fopen("L0Q2.out", "w");
     if (!file_in || !file_out) {
         printf("Erro ao abrir arquivos\n");
         return 1;
@@ -205,6 +205,6 @@ int main() {
    
     fclose(file_in);
     fclose(file_out);
-    remover_ultima_linha_em_branco("L0Q1.out");
+    remover_ultima_linha_em_branco("L0Q2.out");
 
 }
