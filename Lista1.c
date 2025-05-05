@@ -175,9 +175,9 @@ int main() {
     while (fgets(line, LINE_MAX_SIZE, file_in)) {
         char *p = line;
         int qtd_int = 0, qtd_real = 0, qtd_str = 0, qtd_ponto = 0;
-        int inteiros[100];
-        float reais[100];
-        char *strings[100];
+        int inteiros[500];
+        float reais[500];
+        char *strings[500];
 
         while (*p == ' ' || *p == '\n') p++;  // pula espaços no começo
         {
@@ -197,7 +197,9 @@ int main() {
         OrdenarPontos(pontos,qtd_ponto,chave);
    
         printer(file_out, qtd_str, strings, qtd_int, inteiros, qtd_real, reais, qtd_ponto, pontos);
-        
+        for (int i = 0; i < qtd_str; i++) {
+            free(strings[i]);
+        }
     }
     
    
